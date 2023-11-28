@@ -6,15 +6,19 @@ import {
   GoogleAuthProvider,
 } from 'firebase/auth';
 
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
-  authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
-  projectId: 'crwn-clothing-db-98d4d',
-  storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
-  messagingSenderId: '626766232035',
-  appId: '1:626766232035:web:506621582dab103a4d08d6',
+  apiKey: "AIzaSyAlXbJboPQh34slFAO_X53STvJAcIMFm7g",
+  authDomain: "crwn-clothing-db-1938a.firebaseapp.com",
+  projectId: "crwn-clothing-db-1938a",
+  storageBucket: "crwn-clothing-db-1938a.appspot.com",
+  messagingSenderId: "612808677346",
+  appId: "1:612808677346:web:0f828b2226cd1c5dc30bbb"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 const firebaseApp = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
@@ -30,4 +34,5 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 };
 
 export const auth = getAuth();
+
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
